@@ -1,0 +1,1072 @@
+@charset "UTF-8";
+/* =RESET */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,main,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}main,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}ol,ul{list-style:none;}li{display: block;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}table{border-collapse:collapse;border-spacing:0;}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0;}b,strong{font-weight:bold;}textarea{overflow:auto;vertical-align:top;}html{font-family:sans-serif;font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-rendering:optimizelegibility;-webkit-tap-highlight-color:rgba(0,0,0,0);}audio,canvas,progress,video{display:inline-block;vertical-align:baseline;}audio:not([controls]){display:none;height:0;}[hidden],template{display:none;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-0.25em;}sub{bottom:-0.25em;}img{border:0;}svg:not(:root){overflow:hidden;}pre{overflow:auto;}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0;}button{overflow:visible;}button,select{text-transform:none;}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer;}button[disabled],html input[disabled]{cursor:default;}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}input{line-height:normal;}input[type="checkbox"],input[type="radio"]{padding:0;}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto;}input[type="search"]{-webkit-appearance:textfield;}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none;}legend{border:0;padding:0;}optgroup{font-weight:bold;}td,th{padding:0;}a{background:transparent;text-decoration:none;}a:active,a:hover,a:focus{border:none;outline:0;text-decoration:none;}::selection{background:#6a6a6a;color:#f5f5f5;text-shadow:1px 1px 1px #060606;}::-moz-selection{background:#6a6a6a;color:#f5f5f5;text-shadow:1px 1px 1px #060606;}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0;}::-webkit-input-placeholder{color:inherit;opacity:0.5;font-family:inherit;}:-moz-placeholder{color:inherit;opacity:0.5;font-family:inherit;}::-moz-placeholder{color:inherit;opacity:0.5;font-family:inherit;}:-ms-input-placeholder{color:inherit;opacity:0.5;font-family:inherit;}button,.btn:hover{cursor:pointer;}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+
+
+/*  =DEFAULT & BASIC STYLES
+  ========================================================================== */
+html,
+body {
+  min-height: 100%;
+}
+body {
+  background: url('../images/bg-body.jpg') no-repeat center center #e6f3fb;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: #000;
+  font:400 62.5%/1 'Roboto Condensed', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  padding: 0;
+  text-align: center;
+}
+
+main,
+header,
+section,
+footer,
+nav,
+.container,
+a {
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+
+.blockItem a:before,
+.blockItem a:after,
+.blockItem:before,
+.blockItem:after,
+.block:before,
+.block:after,
+.container:before,
+.container:after,
+nav:before,
+nav:after,
+main:before,
+main:after,
+header:before,
+header:after,
+section:before,
+section:after,
+footer:before,
+footer:after,
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+.blockItem a:after,
+.blockItem:after,
+.block:after,
+.container:after,
+nav:after,
+main:after,
+header:after,
+section:after,
+footer:after,
+.cf:after {
+  clear: both;
+}
+
+.container {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200%;
+  width: 760px;
+}
+
+img {
+  display: inline-block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 200%;
+  width: auto;
+}
+
+
+
+.green { color: #19f38e;
+}
+
+.hb {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.15s ease-out;
+  -moz-transition: -moz-transform 0.15s ease-out;
+  -ms-transition: -ms-transform 0.15s ease-out;
+  -o-transition: -o-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out;
+  z-index: 1;
+}
+  .hb::before {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.33);
+    z-index: -1;
+    opacity: 0;
+    -webkit-transform: scale3d(0.35, 1, 1);
+    transform: scale3d(0.35, 1, 1);
+    -webkit-transition: -webkit-transform 0.4s, opacity .4s;
+    transition: transform 0.4s, opacity .4s;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+  }
+  .hb:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+  .hb:hover::before {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .hb:active {
+    -webkit-transition: transform 0.1s linear;
+    -moz-transition: transform 0.1s linear;
+    -ms-transition: transform 0.1s linear;
+    -o-transition: transform 0.1s linear;
+    transition: transform 0.1s linear;
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
+    transform: translateY(1px);
+  }
+
+
+.centered {
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+}
+
+
+.red,
+.c1 {
+  color: #f00;
+}
+
+
+/*  ==========================================================================
+  CONTENT 
+  ========================================================================== */
+#container {
+  padding: 0;
+}
+  .page {
+    display: none;
+    line-height: 1.06;
+    color: #000;
+    margin: 0 auto;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.4s ease-in-out;
+    -moz-transition: -moz-transform 0.4s ease-in-out;
+    -ms-transition: -ms-transform 0.4s ease-in-out;
+    -o-transition: -o-transform 0.4s ease-in-out;
+    transition: transform 0.4s ease-in-out;
+  }
+  .page.active {
+    display: block;
+  }
+  .page.done {
+    -webkit-transform: scale3d(0.33, 0.2, 0.33) translate(-150%,-33%);
+    -moz-transform: scale3d(0.33, 0.2, 0.33) translate(-150%,-33%);
+    -ms-transform: scale3d(0.33, 0.2, 0.33) translate(-150%,-33%);
+    -o-transform: scale3d(0.33, 0.2, 0.33) translate(-150%,-33%);
+    transform: scale3d(0.33, 0.2, 0.33) translate(-150%,-33%);
+  }
+
+    .box {
+      font-size: 2em;
+      font-weight: bold;
+      line-height: 1.06;
+      margin: 0 auto;
+      padding: 2em 0.63em;
+    }
+      .page .box figure {
+        max-width: 320px;
+        margin: 0 auto 1em;
+        text-align: center;
+      }
+        .page .box figure img {
+          display: block;
+          margin: auto;
+        }
+
+      .box p {
+        margin-bottom: 0.666em;
+      }
+
+      .buttons {
+        clear: both;
+        margin: 0 auto 2em;
+        text-align: center;
+      }
+      #final .buttons {
+        margin-bottom: 1em;
+      }
+        .buttons a {
+          background: #67ae55;
+        }
+        .buttons a,
+        .checkbox label {
+          border: 2px solid #000;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          border-radius: 3px;
+          color: #000;
+          cursor: pointer;
+          display: inline-block;
+          font-size: 2.8em;
+          line-height: 1.6;
+          height: 1.8em;
+          width: 45%;
+          padding: 0 1em;
+          font-weight: bold;
+          text-decoration: none;
+        }
+          .buttons a.btnFull {
+            width: 80%;
+          }
+          .buttons a + a {
+             margin-left: 4%;
+          }
+          .buttons a.btnno {
+            background: #dadada;
+            color: #fff;
+          }
+          .buttons a.btnnext {
+            max-width: 400px;
+            font-size: 2.5em;
+            width: 92%;
+          }
+          #final .buttons a.btnnext {
+            font-size: 1.8em;
+            max-width: 530px;
+            width: 100%;
+          }
+
+          .checkbox.checkbox4 label,
+          .buttons.buttons4 a {
+            margin: 0 1% 2%;
+          }
+
+          .box.boxAlt {
+            padding-bottom: 0.5em;
+          }
+          #final .box.boxAlt {
+            padding-top: 1em;
+          }
+
+
+
+
+      .progress {
+        height: 20px;
+        margin: 0 auto 1em;
+        overflow: hidden;
+        background-color: #000;
+        border: 2px solid #000;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        border-radius: 8px;
+        -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+        box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+        max-width: 80%;
+      }
+      .progress-bar {
+        float: left;
+        width: 0;
+        height: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        color: #fff;
+        text-align: center;
+        background-color: #3b5998;
+        -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+        box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+        -webkit-transition: width .6s ease;
+        -moz-transition: width .6s ease;
+        -ms-transition: width .6s ease;
+        -o-transition: width .6s ease;
+        transition: width .6s ease;
+      }
+      .progress-bar-striped,
+      .progress-striped .progress-bar {
+        background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        background-image: -o-linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+        -webkit-background-size: 40px 40px;
+        -moz-background-size: 40px 40px;
+        -o-background-size: 40px 40px;
+        background-size: 40px 40px;
+        -webkit-animation: stripes 2s linear infinite;
+        -moz-animation: stripes 2s linear infinite;
+        -ms-animation: stripes 2s linear infinite;
+        -o-animation: stripes 2s linear infinite;
+        animation: stripes 2s linear infinite;
+      }
+      @-webkit-keyframes stripes {
+          0% {
+              background-position: 0 0;
+          }
+          100% {
+              background-position: 40px 0;
+          }
+      }
+      @-moz-keyframes stripes {
+          0% {
+              background-position: 0 0;
+          }
+          100% {
+              background-position: 40px 0;
+          }
+      }
+      @-ms-keyframes stripes {
+          0% {
+              background-position: 0 0;
+          }
+          100% {
+              background-position: 40px 0;
+          }
+      }
+      @-o-keyframes stripes {
+          0% {
+              background-position: 0 0;
+          }
+          100% {
+              background-position: 40px 0;
+          }
+      }
+      @keyframes stripes {
+          0% {
+              background-position: 0 0;
+          }
+          100% {
+              background-position: 40px 0;
+          }
+      }
+
+
+      .box p.results {
+        font-size: 0.95em;
+        margin-bottom: 0.9em;
+      }
+        .box p.results strong {
+          font-size: 1.5em;
+          font-weight: bold;
+        }
+      .box p.resultsAlert {
+        font-size: 0.9em;
+        margin-bottom: 1em;
+      }
+        .box p.resultsAlert .red {
+          color: #f00;
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+
+
+      .rules {
+        clear: both;
+        display: block;
+        margin: 0 auto 1em;
+        max-width: 450px;
+        text-align: left;
+        width: 96%;
+      }
+        .rules li {
+          display: list-item;
+          font-size: 0.8em;
+          list-style: disc inside;
+          margin-bottom: 0.5em;
+        }
+
+
+      .warning {
+        font-size: 0.7em;
+        font-weight: normal;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        letter-spacing: -0.25px;
+      }
+      .warning strong {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+
+
+    .selects {
+      clear: both;
+      margin: 0 auto 2em;
+      text-align: center;
+    }
+      select {
+        background: url("../images/icon-select.png") no-repeat 98% 56% transparent;
+        -webkit-appearance:none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: '';
+        border: none;
+        border-bottom: 2px solid #000;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        color: #000;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 4em;
+        line-height: 2;
+        height: 2em;
+        margin: 0;
+        padding: 0 1em 0 0;
+      }
+      select + select {
+        margin-left: 2em;
+        margin-left: 4vw;
+      }
+
+  figure.secure {
+    display: block;
+    margin: 0 auto;
+  }
+
+
+
+
+
+/*  PROFILE 
+  ========================================================================== */
+.step {
+  color: #000;
+}
+.title {
+  color: #3b5998;
+  font-size: 4.2em;
+  font-weight: bold;
+  line-height: 0.9;
+  margin-bottom: 0.5em;
+}
+  .title span,
+  .title img {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  .title span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+  }
+  .title img {
+    height: 1em;
+  }
+
+
+.block {
+  margin: 0 auto;
+}
+  .blockItem {
+    float: left;
+    padding: 0 5px 2em;
+  }
+  .block2 .blockItem {
+    width: 50%;
+  }
+  .blockItem a {
+    color: #000;
+    display: block;
+  }
+
+  .txt {
+    font-size: 3.2em;
+    line-height: 1;
+    margin-bottom: 0.5em;
+  }
+
+
+.profiles figure {
+  float: left;
+  width: 50%;
+  -webkit-transition: -webkit-transform 0.15s ease-out;
+  -moz-transition: -moz-transform 0.15s ease-out;
+  -ms-transition: -ms-transform 0.15s ease-out;
+  -o-transition: -o-transform 0.15s ease-out;
+  transition: transform 0.15s ease-out;
+}
+.profiles a:hover figure {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
+}
+.profiles .details {
+  float: right;
+  font-size: 5em;
+  text-align: left;
+  width: 50%;
+  margin-top: 1em;
+  padding-left: 0.1em;
+}
+
+
+.txt .txtSm,
+.txt .profileName {
+  font-size: 0.8em;
+}
+.txt .txtXSm {
+  font-size: 0.6em;
+}
+.txt .txtXXSm,
+.txt .rating {
+  font-size: 0.5em;
+}
+
+.txt .btnLinks {
+  color: #fff;
+  font-size: 1em;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+.txt .btnLinks:hover {
+  color: #3b5998;
+}
+.tac {
+  text-align: center;
+}
+.mb0 {
+  margin-bottom: 0;
+}
+.tdu {
+  text-decoration: underline;
+}
+
+.profilePreview {
+  max-width: 200px;
+  margin: 0 auto;
+}
+.profilePreview img {
+  max-height: 33vh;
+  margin-bottom: 1em;
+}
+.profilePreview img.profilePreviewAlt {
+  margin-bottom: 0;
+}
+
+.buttons.buttonsLinks {
+  margin: 1em auto;
+}
+
+
+
+/*  CHECKBOXES 
+  ========================================================================== */
+
+.checkbox {
+  clear: both;
+  margin: 0 auto 2em;
+}
+.checkbox label {
+  border: none;
+  display: inline-block;
+  line-height: 1;
+  height: auto;
+  position: relative;
+  max-width: 250px;
+  padding: 0;
+  width: 45%;
+  -webkit-transition: -webkit-transform 0.1s ease-out;
+  -moz-transition: -moz-transform 0.1s ease-out;
+  -ms-transition: -ms-transform 0.1s ease-out;
+  -o-transition: -o-transform 0.1s ease-out;
+  transition: transform 0.1s ease-out;
+}
+.checkbox label:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.checkbox.checkbox4 label {
+  margin: 1% 2%;
+}
+  .checkbox label input {
+    display: none;
+  }
+  .checkbox label input + span {
+    position: relative;
+    display: block;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .checkbox label input + span::before {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+    content: '';
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid #000;
+    margin-right: 0.25em;
+    height: 0.8em;
+    vertical-align: middle;
+    width: 0.8em;
+    -webkit-transition: background 0.15s ease-out;
+    -moz-transition: background 0.15s ease-out;
+    -ms-transition: background 0.15s ease-out;
+    -o-transition: background 0.15s ease-out;
+    transition: background 0.15s ease-out;
+  }
+  .checkbox label input:checked + span::before {
+    background: #3b5998;
+  }
+
+  .dib {
+    display: inline-block;
+  }
+  .page#final {
+    font-size: 0.8em;
+  }
+  .txt.warning {
+    line-height: 0.8;
+    max-width: 82%;
+    margin: 0 auto 0.8em;
+  }
+  #final .profilePreview {
+    max-width: 150px;
+  }
+  #final .buttons {
+    font-size: 1.2em;
+  }
+
+
+
+/*  ==========================================================================
+  MEDIA QUERIES 
+  ========================================================================== */
+
+
+@media only screen and (max-height:749px){
+  .txt.resultsMemberships {
+    font-size: 3.4em;
+  }
+  .page#final {
+    font-size: 0.84em;
+  }
+}
+@media only screen and (max-height:699px){
+  .page {
+    font-size: 0.8em;
+  }
+  .page#final {
+    font-size: 0.79em;
+  }
+  .page:not(#final) figure {
+    max-width: 170px;
+  }
+
+  .rules {
+    display: inline-block;
+    width: auto;
+    max-width: 96%;
+    max-width: none;
+  }
+  .rules li {
+    margin-bottom: 0.25em;
+  }
+}
+@media only screen and (max-height:599px){
+
+  .page {
+    font-size: 0.75em;
+  }
+
+  .page:not(#final) figure {
+    max-width: 140px;
+  }
+  .page#page5 > .txt {
+    font-size: 3.3em;
+    margin-bottom: 0.25em;
+  }
+  .page#page5 > figure {
+    max-width: 110px;
+  }
+  .checkbox label {
+    max-width: 235px;
+    font-weight: normal;
+    font-size: 3.5em;
+  }
+
+
+  .page#final {
+    font-size: 0.7em;
+  }
+  #final .profilePreview {
+    max-width: 140px;
+  }
+  .buttons.buttonsLinks {
+    font-size: 3.7em;
+    margin: 0.5em auto;
+  }
+  .txt .btnLinks {
+    line-height: 1;
+    height: auto;
+    display: block;
+    margin-bottom: 0.25em;
+  }
+  .rules {
+    margin-bottom: 0;
+  }
+  .title {
+    margin-bottom: 0.1em;
+  }
+  p.txt.resultsMembers,
+  p.txt.resultsMemberships {
+    margin: auto;
+    max-width: 500px;
+  }
+  #final .profilePreview img {
+    margin-bottom: 0;
+  }
+}
+@media only screen and (max-height:499px){
+  .page:not(#final) figure {
+    max-width: 100px;
+  }
+  .profiles figure {
+    width: 40%;
+  }
+  .profiles .details {
+    width: 60%;
+  }
+  .title {
+    font-size: 3.8em;
+    margin-bottom: 0.3em;
+  }
+  .txt {
+    font-size: 3.7em;
+  }
+  .buttons.buttons4 a {
+    line-height: 1.3;
+    height: 1.5em;
+    font-size: 3.3em;
+  }
+  .checkbox.checkbox4 {
+    max-width: 390px;
+  }
+  .checkbox.checkbox4 label {
+    font-size: 3.3em;
+    max-width: 200px;
+  }
+  .checkbox + .buttons {
+    font-size: 0.8em;
+  }
+
+
+  #final .profilePreview {
+    max-width: 100px;
+  }
+  #final .resultsMembers,
+  #final .title {
+    margin-bottom: 0.2em;
+  }
+  .txt.warning {
+    font-size: 3.7em;
+  }
+  .rules {
+    margin-bottom: 0.1em;
+  }
+  .txt.warning {
+    margin-bottom: 0.25em;
+  }
+  #final .buttons {
+    font-size: 1.4em;
+    margin-bottom: 0.1em;
+  }
+  #final .buttons a {
+    line-height: 1.4;
+    height: 1.6em;
+  }
+  figure.secure {
+    max-width: 200px;
+  }
+
+
+}
+@media only screen and (max-height:399px){
+  .txt .btnLinks {
+    margin-bottom: 0.25em;
+  }
+  .buttons.buttonsLinks {
+    font-size: 2.4em;
+  }
+  .page#page2 figure {
+    max-width: 120px;
+  }
+  .txt .rating,
+  .txt .profileName {
+    display: block;
+    margin: 0 auto 0.2em;
+    font-size: 0.66em;
+  }
+  .txt .rating {
+    font-size: 0.46em;
+  }
+  .page:not(#final) figure {
+    max-width: 75px;
+  }
+
+  .profiles {
+    max-width: 540px;
+  }
+  .profiles figure {
+    width: 33%;
+  }
+  .profiles .details {
+    margin-top: 0.35em;
+    width: 66%;
+  }
+  .title {
+    font-size: 3em;
+    max-width: 430px;
+    margin: 0 auto 0.2em;
+  }
+  .txt {
+    font-size: 3.5em;
+  }
+  .buttons a {
+    font-size: 3em;
+  }
+  .buttons.buttons4 {
+    margin-bottom: 0;
+  }
+  .buttons.buttons4 a {
+    font-size: 2.9em;
+    margin: 0 0.1em 0.3em
+  }
+  .checkbox + .buttons {
+    margin-bottom: 0.2em;
+  }
+
+  .page#page2 {
+    font-size: 1em;
+  }
+
+
+  .page#final strong {
+    font-size: 1.2em;
+  }
+  .rules {
+    font-size: 0.8em;
+    max-width: 360px;
+  }
+  .page#final .buttons {
+    margin-bottom: 0.5em;
+  }
+  .page#final .buttons a.btnnext {
+    font-size: 2em;
+  }
+
+  #final .rules {
+    font-size: 3.5em;
+  }
+  #final .txt.warning {
+    font-size: 3.2em;
+    max-width: 400px;
+  }
+  #final .profilePreview {
+    display: none !important;
+  }
+  #final .title {
+    font-size: 3em;
+    margin-bottom: 0;
+  }
+  #final .resultsMembers {
+    font-size: 2.2em;
+  }
+  #final .resultsMemberships {
+    font-size: 2.8em;
+    margin-bottom: 0.2em;
+  }
+  .page#final .buttons {
+    font-size: 1.5em;
+    margin-bottom: 0;
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    width: 560px;
+  }
+  .title {
+    font-size: 3.4em;
+  }
+  .buttons {
+    margin-bottom: 0.5em;
+  }
+  .txt {
+    font-size: 2.2em;
+  }
+  .page#page5 > .txt {
+    font-size: 2.6em;
+    margin-bottom: 0.25em;
+  }
+  .checkbox.checkbox4 {
+    max-width: 520px;
+  }
+  .checkbox.checkbox4 label {
+    font-size: 2.8em;
+    max-width: 190px;
+    margin: 1%;
+  }
+  .buttons a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media screen and (max-width: 767px) and (min-height:700px) {
+  .profiles .details {
+    font-size: 3.7em;
+  }
+}
+@media screen and (max-width: 579px) {
+  .container {
+    width: 460px;
+  }
+  .profiles .details {
+    font-size: 3.7em;
+    padding-left: 0.5em;
+  }
+  span.age {
+    display: block;
+  }
+  .checkbox.checkbox4 label {
+    max-width: 200px;
+    margin: 1% 0.5%;
+  }
+}
+@media screen and (max-width: 579px) and (min-height:700px) {
+  .profiles .details {
+    margin-top: 0.2em;
+  }
+}
+@media screen and (max-width: 479px) {
+  .container {
+    width: 310px;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .profiles .details {
+    font-size: 2.5em;
+    padding-left: 0.5em;
+  }
+  .txt .btnLinks {
+    width: auto;
+  }
+  .txt .rating {
+    font-size: 0.7em;
+  }
+  .buttons:not(.buttonsLinks) {
+    font-size: 0.7em;
+  }
+  .buttons a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .checkbox.checkbox4 label {
+    font-weight: 300;
+    font-size: 2.6em;
+    width: 140px;
+    letter-spacing: -0.25px;
+    letter-spacing: -0.025em;
+    word-spacing: -0.25px;
+    word-spacing: -0.025em;
+  }
+  #final .profilePreview {
+    display: none !important;
+  }
+  .title {
+    font-size: 2.6em;
+  }
+}
+@media screen and (max-width: 479px) and (min-height:700px) {
+  .buttons:not(.buttonsLinks) {
+    font-size: 0.55em;
+  }
+  .checkbox.checkbox4 {
+    display: inline-block;
+  }
+  .checkbox.checkbox4 label {
+    display: block; 
+    max-width: none;
+    width: 100%;
+    margin: 1%;
+  }
+  .buttons a,
+  .checkbox label {
+    font-size: 3.2em;
+  }
+}
+@media screen and (max-width: 479px) and (max-height:499px) {
+  .profiles figure {
+    width: 60%;
+  }
+  .profiles .details {
+    margin-top: 1em;
+    width: 40%;
+  }
+  .title {
+    font-size: 2.3em;
+  }
+  .txt {
+    font-size: 2.8em;
+  }
+  .txt .profileName {
+    font-size: 1em;
+  }
+  .txt .rating {
+    font-size: 0.8em;
+  }
+  .page:not(#final) figure {
+    max-width: 95px;
+  }
+}
+@media screen and (max-width: 479px) and (max-height:399px) {
+  .checkbox.checkbox4 {
+    display: inline-block;
+  }
+  .checkbox.checkbox4 label {
+    font-size: 3.1em;
+    display: block;
+    max-width: none;
+    width: 100%;
+  }
+  #page5 .profilePreview {
+    display: none;
+  }
+  figure.secure {
+    max-width: 140px;
+  }
+}
